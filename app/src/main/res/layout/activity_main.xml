@@ -140,15 +140,24 @@
         android:text="/" />
 
     <Button
-        android:id="@+id/btnSign"
-        android:layout_width="wrap_content"
-        android:layout_height="62dp"
+        android:id="@+id/btnLBracket"
+        android:layout_width="41dp"
+        android:layout_height="63dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="64dp"
-        android:backgroundTint="#CC9340"
-        android:text="+/-" />
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="63dp"
+        android:text="(" />
+
+    <Button
+        android:id="@+id/btnRBracket"
+        android:layout_width="41dp"
+        android:layout_height="63dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="63dp"
+        android:text=")" />
 
     <Button
         android:id="@+id/btnMultiply"
@@ -196,12 +205,39 @@
     <com.lachapelle.christian.calculator.NoVKEditText
         android:id="@+id/txtValues"
         android:layout_width="366dp"
-        android:layout_height="118dp"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/btnTwo"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="11dp"
         android:ems="10"
-        android:inputType="numberSigned"/>
+        android:gravity="right"
+        android:inputType="numberSigned|text|numberDecimal"
+        android:scrollbars="horizontal" />
+
+    <TextView
+        android:id="@+id/txtHistory"
+        android:layout_width="365dp"
+        android:layout_height="114dp"
+        android:layout_above="@+id/txtValues"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#C5C5C5"
+        android:gravity="bottom"
+        android:scrollbars="vertical"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/lblHistory"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtHistory"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="294dp"
+        android:layout_marginBottom="5dp"
+        android:text="History"
+        android:textSize="20sp" />
+
 
 </RelativeLayout>
