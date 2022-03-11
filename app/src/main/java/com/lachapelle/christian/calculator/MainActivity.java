@@ -164,7 +164,20 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         else if (view.getId() == R.id.btnDecimal){
-            editText.append(".");
+            // Only allow for one decimal point in a value.
+            // If starting a value with . add a 0 in front of it.
+            String[] parts = editText.getText().toString().split(" ");
+            String lastExpression = parts[parts.length - 1];
+
+            if (lastExpression.contains("+") ||
+                    lastExpression.contains("-") ||
+                    lastExpression.contains("*") ||
+                    lastExpression.contains("/")){
+                editText.append("0.");
+            }
+            else if (!lastExpression.contains(".")){
+                editText.append(".");
+            }
         }
     }
 
